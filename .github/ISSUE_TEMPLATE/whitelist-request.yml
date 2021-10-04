@@ -1,0 +1,84 @@
+name: Whitelist Request
+description: Games tested and found to have no issues.
+body:
+  - type: input
+    attributes:
+      label: "Name of the game to be whitelisted:"
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Steam AppID of the game:"
+      description: |
+        You can find the Steam AppID in the URL of the shop page of the game.
+        e.g. for `The Witcher 3: Wild Hunt` the AppID is `292030`.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "GPU:"
+      description: |
+        e.g. RX 580 or GTX 970
+        You can find your driver and Linux version, as well as your graphics processor's name in the system information report of Steam.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Driver/LLVM version:"
+      description: e.g. Mesa 18.2/7.0.0 or Nvidia 396.54
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Distro version:"
+      description: e.g. Ubuntu 18.04
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Link to full system information as Gist:"
+      description: |
+        You can retrieve a full system information report by clicking `Help` > `System Information` in the Steam client on your machine.
+        Please copy it to your clipboard by pressing `Ctrl+A` and then `Ctrl+C`.
+        Paste the report into a [Gist](https://gist.github.com/) and post the link in this field.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: "Proton version:"
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: "I confirm:"
+      options:
+        - label: that pressing the `Play` button in the Steam client is sufficient.
+          required: false
+        - label: that [runtime config options](https://github.com/ValveSoftware/Proton#runtime-config-options) are necessary to run the game.
+          required: false
+        - label: that no workarounds other than PROTON_* env variables are necessary.
+          required: false
+
+  - type: dropdown
+    attributes:
+      label: Issues
+      options:
+        - I haven't experienced any issues.
+        - There are no issues left open for this game.
+        - Although I consider the gaming experience equal to Windows there are remaining issues.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Issue description
+      description: |
+        If this game has issues, describe them here.
+        Please search for open issues and pull requests by the name of the game and find out whether they are relevant and should be referenced above.

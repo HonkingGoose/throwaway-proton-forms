@@ -1,0 +1,38 @@
+name: Feature Request
+description: Suggest an idea for this project
+body:
+  - type: checkboxes
+    attributes:
+      label: "I confirm:"
+      options:
+        - label: that I haven't found another request for this feature.
+          required: true
+        - label: that I have checked whether there are updates for my system available that contain this feature already.
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: What do you want to be added?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Justification
+      description: Why integration in Proton instead of Wine?
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Risks
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: References
+      description: Which issues are related?
+    validations:
+      required: false

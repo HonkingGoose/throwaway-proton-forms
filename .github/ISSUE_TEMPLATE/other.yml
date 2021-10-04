@@ -1,0 +1,10 @@
+name: Other
+description: No other issue template makes sense
+body:
+  - type: textarea
+    attributes:
+      label: "Other issue"
+      description: |
+        Please always mention the Proton version and the titles of any games you are seeing an issue with.
+    validations:
+      required: true
